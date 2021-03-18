@@ -12,7 +12,7 @@ export const getContacts = (payload) => ({
     payload
 })
 
-export const selectedContact = (payload) => ({
+export const setSelectedContact = (payload) => ({
     type: types.SELECTED_CONTACT,
     payload
 })

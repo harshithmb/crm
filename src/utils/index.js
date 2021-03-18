@@ -16,6 +16,7 @@ export const contactsAPI = [{
         address: "@abc, abc -12345"
     },
     company: "ABC",
+    color: getRandomColor()
 },
 {
     name: "Coil",
@@ -23,9 +24,11 @@ export const contactsAPI = [{
         fullName: "Coil Benjamin",
         email: "abc@gmail.com",
         phone: "123456789",
-        address: "@abc, abc -12345"
+        address: "@abc, abc -12345",
+        description: "Product Manager at abc"
     },
     company: "ABC",
+    color: getRandomColor()
 },
 {
     name: "Ribhu",
@@ -33,9 +36,11 @@ export const contactsAPI = [{
         fullName: "Ribhu Brah",
         email: "abc@gmail.com",
         phone: "123456789",
-        address: "@abc, abc -12345"
+        address: "@abc, abc -12345",
+        description: "Product Manager at abc"
     },
     company: "ABC",
+    color: getRandomColor()
 },
 {
     name: "Rocky",
@@ -43,8 +48,10 @@ export const contactsAPI = [{
         fullName: "Rocky Bill",
         email: "abc@gmail.com",
         phone: "123456789",
-        address: "@abc, abc -12345"
+        address: "@abc, abc -12345",
+        description: "Product Manager at abc",
     },
     company: "ABC",
+    color: getRandomColor()
 },
 ]
