@@ -1,0 +1,52 @@
+import React from 'react';
+import { Layout, Menu, Button } from 'antd';
+import {
+  DesktopOutlined,
+  MenuOutlined,
+  FileOutlined,
+  ContactsOutlined,
+  SearchOutlined,
+  BellOutlined
+} from '@ant-design/icons';
+import styles from "./Layout.module.css"
+import ContentPage from '../Contact/Content/';
+const { Header, Content, Sider } = Layout;
+
+class SiderMenu extends React.Component {
+  state = {
+  };
+
+  render() {
+      let {userName} = this.props;
+    return (
+      <Layout style={{ minHeight: '100vh' }}>
+        <Sider theme="dark" collapsed={true}>
+          <div className={styles.logo}>
+              <MenuOutlined style={{color: "#fff", fontSize: "20px"}}/>
+        </div>
+          <Menu className={styles.menu} defaultSelectedKeys={['1']} mode="inline">
+            <Menu.Item key="1" icon={<ContactsOutlined  className={styles.menuIcon} />}/>
+            <Menu.Item key="2" icon={<DesktopOutlined  className={styles.menuIcon} />}/>
+            <Menu.Item key="3"icon={<FileOutlined  className={styles.menuIcon} />} />
+          </Menu>
+        </Sider>
+        <Layout className="site-layout">
+          <Header className={styles.siteLayoutBg} style={{ padding: 0 }}>
+              <div><SearchOutlined className={styles.searchIcon}/></div>
+              <div className={styles.rightSideItems}>
+                <Button type="ghost" className={styles.addBtn}>+ ADD</Button>
+                  {userName}
+                  <BellOutlined className={styles.bellIcon}/>
+              </div>
+          </Header>
+
+          <Content style={{ margin: '0 16px' }}>
+              <ContentPage />
+          </Content>
+       </Layout>
+      </Layout>
+    );
+  }
+}
+
+export default SiderMenu;

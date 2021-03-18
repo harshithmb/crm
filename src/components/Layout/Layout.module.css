@@ -1,0 +1,40 @@
+.siteLayoutBg{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-bottom: 68px;
+    padding: 24px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.searchIcon{
+    font-size: 22px;
+    margin-left: 30px;
+    padding: 8px;
+    border: 1px solid #bfbfbf;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+.menuIcon{
+    font-size: 22px !important;
+    color: #fff;
+}
+
+.rightSideItems{
+    margin-right: 30px;
+}
+
+.bellIcon{
+    padding-left: 20px;;
+    font-size: 20px;
+}
+
+.addBtn{
+    margin-right: 20px;
+}
