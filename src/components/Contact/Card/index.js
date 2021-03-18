@@ -3,13 +3,13 @@ import { Avatar } from 'antd';
 import styles from "./Card.module.css";
 import { connect } from 'react-redux';
 
-const Card = ({selectedContact}) => {
-    let { color, company, fullName, description, address, email, phone} = selectedContact;
+const Card = ({ selectedContact }) => {
+    let { color, company, fullName, description, address, email, phone } = selectedContact;
     return (
         <>
             <div className={`card d-flex ${styles.card}`}>
                 <div className="justify-content-center w-100 d-flex mt-5">
-                    <Avatar size={100} style={{ verticalAlign: 'middle', fontSize: "30px",backgroundColor: color }}>
+                    <Avatar size={100} style={{ verticalAlign: 'middle', fontSize: "30px", backgroundColor: color }}>
                         <span>{fullName?.slice(0, 2).toUpperCase()}</span>
                     </Avatar>
                 </div>
@@ -40,9 +40,9 @@ const Card = ({selectedContact}) => {
 }
 
 
-  
-  const mapStateToProps = (store) => ({
+
+const mapStateToProps = (store) => ({
     selectedContact: store?.selectedContact,
-  })
-  
-  export default connect(mapStateToProps, null)(Card);
+})
+
+export default connect(mapStateToProps, null)(Card);

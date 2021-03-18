@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Layout userName="Mark Henry"/>
+      <Layout />
     </div>
   );
 }

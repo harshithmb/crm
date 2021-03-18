@@ -1,11 +1,11 @@
 import * as types from "../types"
-import {getRandomColor} from "../utils"
+import { getRandomColor } from "../utils"
 
 const initialState = {
     contacts: [],
     selectedContact: [],
     addNewContact: false,
-    contact :  {
+    contact: {
         fullName: "",
         email: "",
         phone: "",
@@ -23,19 +23,20 @@ export const contactReducer = (state = initialState, { type, payload }) => {
 
         case types.SELECTED_CONTACT:
             return { ...state, selectedContact: payload }
-            
-        
+
+
         case types.ADD_CONTACT:
-            return { ...state, contacts: [...state.contacts, payload], addNewContact: false, contact: initialState.contact}
-        
+            return { ...state, contacts: [...state.contacts, payload], addNewContact: false, contact: initialState.contact }
+
         case types.SHOW_MODAL_FORM:
             return { ...state, addNewContact: payload }
 
-        case types.SORT_BY:{
-            return { ...state, contacts: payload === "name" ? 
-            [...state.contacts]?.sort((a, b) => (a.fullName > b.fullName) ? 1 : -1) :
-            [...state.contacts]?.sort((a, b) => (a.company > b.company) ? 1 : -1)
-        }
+        case types.SORT_BY: {
+            return {
+                ...state, contacts: payload === "name" ?
+                    [...state.contacts]?.sort((a, b) => (a.fullName > b.fullName) ? 1 : -1) :
+                    [...state.contacts]?.sort((a, b) => (a.company > b.company) ? 1 : -1)
+            }
         }
 
         default:

@@ -1,40 +1,40 @@
 import React from 'react';
 import { Table, Avatar } from 'antd';
 import { connect } from 'react-redux';
-import {setSelectedContact} from "../../../actions/actionCreator"
+import { setSelectedContact } from "../../../actions/actionCreator"
 
-const ContactTable = ({contacts, setContact}) => {
+const ContactTable = ({ contacts, setContact }) => {
   const columns = [
     {
       title: 'Basic Info',
       dataIndex: 'name',
       render: (text, details, index) => {
-        let {color, email, fullName} = details
-          return <div className="d-flex cursor-pointer" onClick={()=> setContact(details)}>
-              <Avatar 
-                  style={{ 
-                      backgroundColor: color, 
-                      verticalAlign: 'middle',
-                      marginTop: "8px"
-                   }} size="large">
-                  {fullName?.slice(0,2).toUpperCase()}
-              </Avatar>
-         
-        <div className="p-2">
-              <div>{fullName}</div>
-              <div>{email}</div>
+        let { color, email, fullName } = details
+        return <div className="d-flex cursor-pointer" onClick={() => setContact(details)}>
+          <Avatar
+            style={{
+              backgroundColor: color,
+              verticalAlign: 'middle',
+              marginTop: "8px"
+            }} size="large">
+            {fullName?.slice(0, 2).toUpperCase()}
+          </Avatar>
+
+          <div className="p-2">
+            <div>{fullName}</div>
+            <div>{email}</div>
+          </div>
         </div>
-        </div>
-        },
+      },
     },
     {
       title: 'Company',
       dataIndex: 'company',
     },
   ];
-  return ( <>
-  {contacts?.length && <Table columns={columns} dataSource={contacts} />}
-  </> );
+  return (<>
+    {contacts?.length && <Table columns={columns} dataSource={contacts} />}
+  </>);
 }
 
 const mapDispatchToProps = (dispatch) => ({
