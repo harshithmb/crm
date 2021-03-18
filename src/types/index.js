@@ -5,3 +5,5 @@ export const REMOVE_CONTACT = 'REMOVE_CONTACT';
 export const GET_CONTACTS = 'GET_CONTACTS';
 
 export const SELECTED_CONTACT = 'SELECTED_CONTACT';
+
+export const SHOW_MODAL_FORM = 'SHOW_MODAL_FORM';

@@ -2,6 +2,7 @@ import React from 'react';
 import { Avatar } from 'antd';
 import styles from "./Card.module.css";
 import { connect } from 'react-redux';
+
 const Card = ({selectedContact}) => {
     console.log("selectedContact",selectedContact)
     let {user, color, company} = selectedContact;

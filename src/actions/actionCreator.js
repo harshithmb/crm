@@ -22,3 +22,8 @@ export const sortContacts = (payload) => ({
     type: types.SELECTED_CONTACT,
     payload
 })
+
+export const showModalForm = (payload) => ({
+    type: types.SHOW_MODAL_FORM,
+    payload
+})
