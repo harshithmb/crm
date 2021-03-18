@@ -1,25 +1,10 @@
 import React from 'react';
-
-import styles from "./Content.module.css";
-import { Menu, Dropdown, Input, Button } from 'antd';
+import { Input, Button } from 'antd';
 import Table from '../Table';
 import Card from '../Card';
 import TopBar from '../TopBar/TopBar';
 
-
 const { Search } = Input;
-
-const menu = (
-    <Menu>
-      <Menu.Item key="0">
-        Date Created
-      </Menu.Item>
-      <Menu.Item key="1">
-        Company
-      </Menu.Item>
-    </Menu>
-  );
-
 
 const onSearch = value => console.log(value);
 

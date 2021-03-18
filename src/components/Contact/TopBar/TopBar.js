@@ -3,7 +3,19 @@ import {
     ContactsOutlined,
     DownOutlined
   } from '@ant-design/icons';
-import styles from "../Content/Content.module.css"
+import styles from "./TopBar.module.css"
+import { Menu, Dropdown} from 'antd';
+
+const menu = (
+    <Menu>
+      <Menu.Item key="0">
+        Date Created
+      </Menu.Item>
+      <Menu.Item key="1">
+        Company
+      </Menu.Item>
+    </Menu>
+  );
 
 const TopBar = () => {
     return ( <div className="d-flex row">
