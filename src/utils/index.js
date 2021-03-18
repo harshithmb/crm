@@ -9,31 +9,42 @@ export function getRandomColor() {
 
 export const contactsAPI = [{
     name: "Henry",
+    user : {
+        fullName: "Henry Kennedy",
+        email: "abc@gmail.com",
+        phone: "123456789",
+        address: "@abc, abc -12345"
+    },
     company: "ABC",
-    email: "abc@gmail.com",
-    phone: "123456789",
-    address: "@abc, abc -12345"
 },
 {
-    name: "Adella",
-    company: "DDD",
-    email: "ddd@gmail.com",
-    phone: "123456789",
-    address: "@ddd, abc -12345"
+    name: "Coil",
+    user : {
+        fullName: "Coil Benjamin",
+        email: "abc@gmail.com",
+        phone: "123456789",
+        address: "@abc, abc -12345"
+    },
+    company: "ABC",
 },
 {
-    name: "Rambo",
-    company: "CCC",
-    email: "ccc@gmail.com",
-    phone: "123456789",
-    address: "@ccc, abc -12345"
+    name: "Ribhu",
+    user : {
+        fullName: "Ribhu Brah",
+        email: "abc@gmail.com",
+        phone: "123456789",
+        address: "@abc, abc -12345"
+    },
+    company: "ABC",
 },
 {
-    name: "Lucky",
-    company: "DDD",
-    email: "ddd@gmail.com",
-    phone: "123456789",
-    address: "@ddd, abc -12345"
+    name: "Rocky",
+    user : {
+        fullName: "Rocky Bill",
+        email: "abc@gmail.com",
+        phone: "123456789",
+        address: "@abc, abc -12345"
+    },
+    company: "ABC",
 },
 ]
-  

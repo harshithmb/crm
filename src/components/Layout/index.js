@@ -10,14 +10,22 @@ import {
 } from '@ant-design/icons';
 import styles from "./Layout.module.css"
 import ContentPage from '../Contact/Content/';
-const { Header, Content, Sider } = Layout;
 
+import { connect } from 'react-redux';
+import { getContacts } from '../../actions/actionCreator';
+import {contactsAPI} from "../../utils";
+
+const { Header, Content, Sider } = Layout;
 class SiderMenu extends React.Component {
   state = {
   };
 
+  componentDidMount(){
+    this.props.dispatchContacts(contactsAPI)
+  }
+
   render() {
-      let {userName} = this.props;
+      let {selectedContact} = this.props;
     return (
       <Layout style={{ minHeight: '100vh' }}>
         <Sider theme="dark" collapsed={true}>
@@ -35,7 +43,7 @@ class SiderMenu extends React.Component {
               <div><SearchOutlined className={styles.searchIcon}/></div>
               <div className={styles.rightSideItems}>
                 <Button type="ghost" className={styles.addBtn}>+ ADD</Button>
-                  {userName}
+                  {selectedContact?.name}
                   <BellOutlined className={styles.bellIcon}/>
               </div>
           </Header>
@@ -49,4 +57,12 @@ class SiderMenu extends React.Component {
   }
 }
 
-export default SiderMenu;
+const mapDispatchToProps = (dispatch) => ({
+    dispatchContacts: (data) => dispatch(getContacts(data))
+})
+
+const mapStateToProps = (store) => ({
+    selectedContact: store?.selectedContact
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(SiderMenu);
