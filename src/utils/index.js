@@ -8,50 +8,35 @@ export function getRandomColor() {
   }
 
 export const contactsAPI = [{
-    name: "Henry",
-    user : {
-        fullName: "Henry Kennedy",
-        email: "abc@gmail.com",
-        phone: "123456789",
-        address: "@abc, abc -12345"
-    },
+    fullName: "Henry Kennedy",
+    email: "abc@gmail.com",
+    phone: "123456789",
+    address: "@abc, abc -12345",
     company: "ABC",
     color: getRandomColor()
 },
 {
-    name: "Coil",
-    user : {
-        fullName: "Coil Benjamin",
-        email: "abc@gmail.com",
-        phone: "123456789",
-        address: "@abc, abc -12345",
-        description: "Product Manager at abc"
-    },
-    company: "ABC",
+    fullName: "Coil Koir",
+    email: "abc@gmail.com",
+    phone: "123456789",
+    address: "@abc, abc -12345",
+    company: "QQQ",
     color: getRandomColor()
 },
 {
-    name: "Ribhu",
-    user : {
-        fullName: "Ribhu Brah",
-        email: "abc@gmail.com",
-        phone: "123456789",
-        address: "@abc, abc -12345",
-        description: "Product Manager at abc"
-    },
-    company: "ABC",
+    fullName: "Ribhu Koir",
+    email: "qqq@gmail.com",
+    phone: "123456789",
+    address: "@abc, abc -12345",
+    company: "WWW",
     color: getRandomColor()
 },
 {
-    name: "Rocky",
-    user : {
-        fullName: "Rocky Bill",
-        email: "abc@gmail.com",
-        phone: "123456789",
-        address: "@abc, abc -12345",
-        description: "Product Manager at abc",
-    },
-    company: "ABC",
+    fullName: "Rocky Star",
+    email: "qqq@gmail.com",
+    phone: "123456789",
+    address: "@abc, abc -12345",
+    company: "QQQ",
     color: getRandomColor()
 },
 ]

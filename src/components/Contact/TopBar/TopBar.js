@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     ContactsOutlined,
     DownOutlined
@@ -8,18 +8,24 @@ import { Menu, Dropdown} from 'antd';
 import {sortContacts} from "../../../actions/actionCreator";
 import { connect } from 'react-redux';
 
-const menu = (
+const TopBar = (props) => {
+  const [sortBy, setSortBy] = useState("Name")
+
+  const menu = (
     <Menu>
-      <Menu.Item key="0">
-        Date Created
+      <Menu.Item key="0" onClick={()=> {
+  setSortBy("Name")
+  props.sortContacts("name")
+        }}>
+        Name
       </Menu.Item>
-      <Menu.Item key="1">
+      <Menu.Item key="1" onClick={()=> {
+         setSortBy("Company")
+         props.sortContacts("company")}}>
         Company
       </Menu.Item>
     </Menu>
   );
-
-const TopBar = ({sortContacts}) => {
     return ( <div className="d-flex row">
     <ContactsOutlined className={styles.contactIcon}/> 
     <span className={styles.contactText}>Contacts</span>
@@ -27,11 +33,8 @@ const TopBar = ({sortContacts}) => {
     <div className={`d-flex-inline ${styles.sortBy}`}>
     <span className={styles.sortByText}>Sort By:</span>
     <Dropdown overlay={menu} trigger={['click']}>
-        <span className="ant-dropdown-link" onClick={e => {
-            e.preventDefault()
-            sortContacts(e.target.value)
-            }}>
-            Date Created <DownOutlined />
+        <span className="ant-dropdown-link">
+            {sortBy}{" "}<DownOutlined />
         </span>
     </Dropdown>
     </div>

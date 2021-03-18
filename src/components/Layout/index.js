@@ -10,23 +10,21 @@ import {
 } from '@ant-design/icons';
 import styles from "./Layout.module.css"
 import ContentPage from '../Contact/Content/';
-
 import { connect } from 'react-redux';
-import { getContacts } from '../../actions/actionCreator';
+import { getContacts, showModalForm } from '../../actions/actionCreator';
 import {contactsAPI} from "../../utils";
 
 const { Header, Content, Sider } = Layout;
 class SiderMenu extends React.Component {
-  state = {
-  };
 
   componentDidMount(){
     this.props.dispatchContacts(contactsAPI)
   }
 
   render() {
-      let {selectedContact} = this.props;
+      let {selectedContact, showModal} = this.props;
     return (
+        
       <Layout style={{ minHeight: '100vh' }}>
         <Sider theme="dark" collapsed={true}>
           <div className={styles.logo}>
@@ -42,8 +40,8 @@ class SiderMenu extends React.Component {
           <Header className={styles.siteLayoutBg} style={{ padding: 0 }}>
               <div><SearchOutlined className={styles.searchIcon}/></div>
               <div className={styles.rightSideItems}>
-                <Button type="ghost" className={styles.addBtn}>+ ADD</Button>
-                  {selectedContact?.name}
+                <Button type="ghost" className={styles.addBtn} onClick={() => showModal(true)}>+ ADD</Button>
+                  {selectedContact?.fullName}
                   <BellOutlined className={styles.bellIcon}/>
               </div>
           </Header>
@@ -58,7 +56,8 @@ class SiderMenu extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    dispatchContacts: (data) => dispatch(getContacts(data))
+    dispatchContacts: (data) => dispatch(getContacts(data)),
+    showModal: (data) => dispatch(showModalForm(data))
 })
 
 const mapStateToProps = (store) => ({

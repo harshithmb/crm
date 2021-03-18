@@ -3,7 +3,7 @@ import { Input, Button } from 'antd';
 import Table from '../Table';
 import Card from '../Card';
 import TopBar from '../TopBar/TopBar';
-import FromModal from '../../FormModal'
+import FromModal from '../../Modal/Modal'
 import {showModalForm} from "../../../actions/actionCreator";
 import { connect } from 'react-redux';
 const { Search } = Input;
@@ -28,7 +28,7 @@ const ContentPage = (props) => {
                 <Card/>
             </div>
         </div>
-        {<FromModal/>}
+        {<FromModal />}
         
     </div> );
 }

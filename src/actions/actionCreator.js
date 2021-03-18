@@ -19,7 +19,7 @@ export const setSelectedContact = (payload) => ({
 
 
 export const sortContacts = (payload) => ({
-    type: types.SELECTED_CONTACT,
+    type: types.SORT_BY,
     payload
 })
 

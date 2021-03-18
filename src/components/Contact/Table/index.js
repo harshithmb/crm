@@ -9,10 +9,8 @@ const ContactTable = ({contacts, setContact}) => {
       title: 'Basic Info',
       dataIndex: 'name',
       render: (text, details, index) => {
-        let {user, color} = details
-          let {fullName, email} = user
+        let {color, email, fullName} = details
           return <div className="d-flex cursor-pointer" onClick={()=> setContact(details)}>
-    
               <Avatar 
                   style={{ 
                       backgroundColor: color, 
