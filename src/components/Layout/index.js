@@ -35,7 +35,7 @@ class SiderMenu extends React.Component {
                         <Menu.Item key="2" icon={<DesktopOutlined className={styles.menuIcon} />} />
                         <Menu.Item key="3" icon={<FileOutlined className={styles.menuIcon} />} />
                     </Menu>
-                </Sider>ß
+                </Sider>
                 <Layout className="site-layout">
                     <Header className={styles.siteLayoutBg} style={{ padding: 0 }}>
                         <div><SearchOutlined className={styles.searchIcon} /></div>
